@@ -14,7 +14,12 @@ shinyUI(fluidPage(
     sidebarPanel(
       selectInput("account",
                   "Select a Lawmaker:", 
-                  levels(leg$objects$person$name))
+                  levels(leg$objects$person$name)),
+      HTML("This application uses two different API sources:
+           <ul>
+              <li><a href='https://www.govtrack.us/developers/api'>GovTrack's</a> Database of Legislators</li>
+              <li><a href='https://dev.twitter.com/overview/api'>Twitter API data</a> obtained for each Congressional user</li>
+           </ul>")
     ),
     mainPanel(
       fluidRow(

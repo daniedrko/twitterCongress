@@ -12,10 +12,10 @@ library(jsonlite)
 leg <- fromJSON("https://www.govtrack.us/api/v2/role?current=true&limit=1000")
 leg$objects$person$name <- as.factor(leg$objects$person$name)
 
-setup_twitter_oauth(consumer_key = "4yUtgc1w8cdtXIpOGbEJ02GLF", 
-                    consumer_secret = "9SKeAC95ROWlVmDLA26CXpbvbbFz3Wb4n7yVySYZppRMvzA1ex",
-                    access_token = "476953088-10jyeOCwEBsX8p6ngQof5IJg6oXzPogVi3CFh5kt",
-                    access_secret = "X3nbEekHbfEC2vLlYj3hJb0YxXHGjMgcRrzZkTIT4W4fh")
+setup_twitter_oauth(consumer_key = XXXXXXX, 
+                    consumer_secret = XXXXXXX,
+                    access_token = XXXXXXX,
+                    access_secret = XXXXXXX)
 
 shinyServer(function(input, output) {
   
